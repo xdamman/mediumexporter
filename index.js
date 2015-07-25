@@ -35,6 +35,6 @@ utils.loadMediumPost(mediumURL, function(err, json) {
     story.markdown.push(text);
   }
 
-  console.log(story.markdown.join('\n\n'));
+  console.log(story.markdown.join('\n'));
 
 });

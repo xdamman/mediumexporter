@@ -19,26 +19,6 @@ var utils = {
 
   },
   processParagraph: function(p) {
-    var markup = "";
-    switch(p.type) {
-      case 1:
-        markup = "";
-        break;
-      case 2:
-        markup = "#";
-        break;
-      case 3:
-        markup = "##";
-        break;
-      case 4: // image & caption
-        var imgwidth = parseInt(p.metadata.originalWidth,10);
-        var imgsrc = MEDIUM_IMG_CDN+Math.max(imgwidth*2,2000)+"/"+p.metadata.id;
-        markup = "!["+p.text+"]("+imgsrc+")";
-        break;
-      case 9:
-        markup = "*";
-        break;
-    }
 
     var markups_array = utils.createMarkupsArray(p.markups);
 
@@ -53,6 +33,27 @@ var utils = {
         }
       }
       p.text = tokens.join('');
+    }
+
+    var markup = "";
+    switch(p.type) {
+      case 1:
+        markup = "\n";
+        break;
+      case 2:
+        markup = "\n#";
+        break;
+      case 3:
+        markup = "\n##";
+        break;
+      case 4: // image & caption
+        var imgwidth = parseInt(p.metadata.originalWidth,10);
+        var imgsrc = MEDIUM_IMG_CDN+Math.max(imgwidth*2,2000)+"/"+p.metadata.id;
+        p.text = "\n!["+p.text+"]("+imgsrc+")*"+p.text+"*";
+        break;
+      case 9:
+        markup = "* ";
+        break;
     }
 
     p.text = markup + p.text;
@@ -75,7 +76,6 @@ var utils = {
     return markups_array;
   },
   createMarkupsArray: function(markups) {
-    // TODO
     if(!markups || markups.length == 0) return [];
     var markups_array = [];
     for(var j=0;j<markups.length;j++) {
@@ -84,11 +84,14 @@ var utils = {
         case 1: // bold
           utils.addMarkup(markups_array, "**","**",m.start,m.end);
           break;
+        case 2: // italic
+          utils.addMarkup(markups_array, "*","*",m.start,m.end);
+          break;
         case 3: // anchor tag
           utils.addMarkup(markups_array, "[", "]("+m.href+")", m.start, m.end);
           break;
         default:
-          console.log("Unknown markup type "+m.type)
+          console.error("Unknown markup type "+m.type, m);
           break;
       }
     }
