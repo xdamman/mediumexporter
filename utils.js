@@ -51,6 +51,9 @@ var utils = {
         var imgsrc = MEDIUM_IMG_CDN+Math.max(imgwidth*2,2000)+"/"+p.metadata.id;
         p.text = "\n!["+p.text+"]("+imgsrc+")*"+p.text+"*";
         break;
+      case 7: // quote
+        markup = "> ";
+        break;
       case 9:
         markup = "* ";
         break;

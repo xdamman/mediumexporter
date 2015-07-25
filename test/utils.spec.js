@@ -17,7 +17,7 @@ describe("utils", function() {
 
   it("loads the json of a medium post locally", function(done) {
     this.timeout(5000);
-    utils.loadMediumPost("./test/vipassana.json", function(err, json) {
+    utils.loadMediumPost("./test/medium_posts/vipassana.json", function(err, json) {
       expect(err).to.not.exist;
       expect(json.success).to.be.true;
       story.paragraphs = json.payload.value.content.bodyModel.paragraphs;
