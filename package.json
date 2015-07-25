@@ -1,6 +1,6 @@
 {
   "name": "MediumExporter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Export posts from medium.com to markdown or basic html for easy importing",
   "main": "index.js",
   "directories": {
@@ -26,6 +26,10 @@
   ],
   "author": "Xavier Damman (@xdamman)",
   "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "mediumexporter": "index.js"
+  },
   "bugs": {
     "url": "https://github.com/xdamman/MediumExporter/issues"
   },
