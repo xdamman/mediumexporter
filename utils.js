@@ -32,6 +32,7 @@ var utils = {
           tokens.push(markups_array[j]);
         }
       }
+      tokens.push(text.substring(j));
       p.text = tokens.join('');
     }
 
