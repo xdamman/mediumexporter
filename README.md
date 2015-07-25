@@ -1,4 +1,4 @@
-# MediumExport
+# MediumExporter
 Export your stories published on medium.com to markdown for easy import 
 
 I use markdown to edit my own personal blog but lately I really enjoyed using [Medium](https://medium.com) to publish a few posts. 
