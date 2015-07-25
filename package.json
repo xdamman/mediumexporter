@@ -1,0 +1,33 @@
+{
+  "name": "MediumExporter",
+  "version": "0.0.1",
+  "description": "Export posts from medium.com to markdown or basic html for easy importing",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "request": "^2.60.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xdamman/MediumExporter.git"
+  },
+  "keywords": [
+    "medium",
+    "markdown"
+  ],
+  "author": "Xavier Damman (@xdamman)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xdamman/MediumExporter/issues"
+  },
+  "homepage": "https://github.com/xdamman/MediumExporter#readme"
+}
