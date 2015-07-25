@@ -1,5 +1,5 @@
 {
-  "name": "MediumExporter",
+  "name": "mediumexporter",
   "version": "0.1.0",
   "description": "Export posts from medium.com to markdown or basic html for easy importing",
   "main": "index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xdamman/MediumExporter.git"
+    "url": "git+https://github.com/xdamman/mediumexporter.git"
   },
   "keywords": [
     "medium",
@@ -31,7 +31,7 @@
     "mediumexporter": "index.js"
   },
   "bugs": {
-    "url": "https://github.com/xdamman/MediumExporter/issues"
+    "url": "https://github.com/xdamman/mediumexporter/issues"
   },
-  "homepage": "https://github.com/xdamman/MediumExporter#readme"
+  "homepage": "https://github.com/xdamman/mediumexporter#readme"
 }
