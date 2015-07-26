@@ -16,7 +16,15 @@ var utils = {
       json = require(mediumURL);
       return cb(null, json);
     }
-
+  },
+  processSection: function(s) {
+    var section = "";
+    if(s.backgroundImage) {
+      var imgwidth = parseInt(s.backgroundImage.originalWidth,10);
+      var imgsrc = MEDIUM_IMG_CDN+Math.max(imgwidth*2,2000)+"/"+s.backgroundImage.id;
+      section = "\n![]("+imgsrc+")";
+    }
+    return section;
   },
   processParagraph: function(p) {
 
@@ -42,27 +50,45 @@ var utils = {
         markup = "\n";
         break;
       case 2:
-        markup = "\n#";
+        p.text = "\n#"+p.text.replace(/\n/g,'\n#');
         break;
       case 3:
-        markup = "\n##";
+        p.text = "\n##"+p.text.replace(/\n/g,'\n##');
         break;
       case 4: // image & caption
         var imgwidth = parseInt(p.metadata.originalWidth,10);
         var imgsrc = MEDIUM_IMG_CDN+Math.max(imgwidth*2,2000)+"/"+p.metadata.id;
         p.text = "\n!["+p.text+"]("+imgsrc+")*"+p.text+"*";
         break;
-      case 7: // quote
+      case 6:
         markup = "> ";
         break;
+      case 7: // quote
+        p.text = "> #"+p.text.replace(/\n/g,'\n> #');
+        break;
+      case 8:
+        p.text = "\n    "+p.text.replace(/\n/g,'\n    ');
+        break;
       case 9:
-        markup = "* ";
+        markup = "\n* ";
+        break;
+      case 10:
+        markup = "\n1. ";
+        break;
+      case 11:
+        p.text = '\n<iframe src="https://medium.com/media/'+p.iframe.mediaResourceId+'" frameborder=0></iframe>';
+        break;
+      case 13:
+        markup = "\n###";
+        break;
+      case 15: // caption for section image
+        p.text = "*"+p.text+"*";
         break;
     }
 
     p.text = markup + p.text;
 
-    if(p.alignment == 2) p.text = "<center>" + p.text + "</center>";
+    if(p.alignment == 2&& p.type != 6 && p.type != 7) p.text = "<center>" + p.text + "</center>";
 
     return p.text;
   },
