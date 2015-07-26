@@ -1,12 +1,13 @@
 {
   "name": "mediumexporter",
   "version": "0.1.4",
-  "description": "Export posts from medium.com to markdown or basic html for easy importing",
+  "description": "Export posts from medium.com to markdown",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
+    "commander": "^2.8.1",
     "request": "^2.60.0"
   },
   "devDependencies": {

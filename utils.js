@@ -13,7 +13,7 @@ var utils = {
       });
     }
     else {
-      json = require(mediumURL);
+      json = require(process.cwd() + "/" + mediumURL);
       return cb(null, json);
     }
   },

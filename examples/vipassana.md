@@ -1,3 +1,6 @@
+url: https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e
+date: Thu Apr 30 2015 19:55:28 GMT-0300 (BRT)
+
 
 #My 10-day meditation retreat in silence
 

@@ -1,3 +1,6 @@
+url: https://medium.com/@xdamman/10-000-startups-100-000-jobs-fa749671e145
+date: Thu Feb 19 2015 16:09:55 GMT-0200 (BRST)
+
 
 #10,000 startups, 100,000 jobs
 

@@ -1,3 +1,6 @@
+url: https://medium.com/@xdamman/twitter-adsense-35a985c2a4d4
+date: Fri Feb 07 2014 23:42:49 GMT-0200 (BRST)
+
 
 #Twitter AdSense
 

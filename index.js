@@ -1,23 +1,29 @@
 #! /usr/bin/env node
 
-var utils = require('./utils')
+var program = require('commander')
+  , utils = require('./utils')
+  , package = require('./package.json')
   ;
 
+program
+  .version(package.version)
+  .description(package.description)
+  .usage('[options] <medium post url>')
+  .option('-H, --headers', 'Add headers at the beginning of the markdown file with metadata')
+  .option('-S, --separator <separator>', 'Separator between headers and body','')
+  .option('-I, --info', 'Show information about the medium post')
+  .on('--help', function(){
+    console.log('  Examples:');
+    console.log('');
+    console.log('    $ mediumexporter https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e > medium_post.md');
+    console.log('    $ mediumexporter --headers --separator --- https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e > medium_post.md');
+    console.log('    $ mediumexporter mediumpost.json');
+    console.log('');
+  });
 
-var mediumURL = process.argv[2];
+program.parse(process.argv);
 
-if(!mediumURL) {
-  console.log("Usage: mediumexporter MediumURL\n");
-  console.log("This will fetch the medium post and convert it to markdown to stdout.");
-  console.log("e.g. $> mediumexporter https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e > medium_post.md");
-  process.exit(0);
-}
-
-// For testing
-/*
-var mediumURL = "https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e";
-var mediumURL = "./test/vipassana.json";
-*/
+var mediumURL = program.args[0];
 
 utils.loadMediumPost(mediumURL, function(err, json) {
 
@@ -26,6 +32,16 @@ utils.loadMediumPost(mediumURL, function(err, json) {
 
   story.title = s.title;
   story.subtitle = s.content.subtitle;
+  story.date = new Date(s.createdAt);
+  story.url = s.canonicalUrl;
+  story.language = s.detectedLanguage;
+  story.license = s.license;
+
+  if(program.info) {
+    console.log(story);
+    process.exit(0);
+  }
+
   story.sections = s.content.bodyModel.sections;
   story.paragraphs = s.content.bodyModel.paragraphs;
 
@@ -51,6 +67,11 @@ utils.loadMediumPost(mediumURL, function(err, json) {
       story.markdown.push(text);
   }
 
+  if(program.headers) {
+    console.log("url: "+story.url);
+    console.log("date: "+story.date);
+    console.log(program.separator);
+  }
   console.log(story.markdown.join('\n'));
 
 });
