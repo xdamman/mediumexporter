@@ -1,13 +1,13 @@
 # Medium Exporter
-Export your stories published on medium.com to markdown for easy import 
+Export your stories published on medium.com to markdown.
 
-I use markdown to edit my own personal blog but lately I really enjoyed using [Medium](https://medium.com) to publish a few posts. 
+## Why?
 
-That said, I'd love to have a copy of those posts on my own blog, so that's why I'm building this exporter.
+I really enjoy using [Medium](https://medium.com) to publish a few posts every now and then. But I also want to have a copy on my own blog which is using markdown.
 
-I welcome contributions to make it work also in raw HTML or any other format that could be easily imported in whatever blogging engine that you are using.
+## Contributions
 
-** This is a very early version that still needs much more testing **
+I welcome contributions to make it work with other export formats that could be easily imported in other blogging engines.
 
 ## Installation
 
@@ -16,3 +16,7 @@ I welcome contributions to make it work also in raw HTML or any other format tha
 ## Usage
 
     $> mediumexporter https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e > medium_post.md
+
+To have a complete list of options:
+
+    $> mediumexporter -h
