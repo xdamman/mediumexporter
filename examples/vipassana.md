@@ -6,7 +6,7 @@
 
 Image source: [globalpagoda.org](http://www.globalpagoda.org/)
 
-I’ve always been interested in meditation but I’ve never practiced it. I’m just too lazy. I bought the book “[Search Inside Yourself](http://www.amazon.com/Search-Inside-Yourself-Unexpected-Achieving/dp/0062116932)” (by Chade-Meng Tan, a Google engineer), read the first chapter and stopped (like I do with most books). I knew that if I wanted to be serious about this I should put myself in a situation where I wouldn’t have any other alternative than to just do it. That’s how I work. So I signed up for 10-day Vipassana Meditation Retreat in [Dhamma Manda](http://www.manda.dhamma.org/) 3 hours north of San Francisco, April 15th 2015.
+I’ve always been interested in meditation but I’ve never practiced it. I’m just too lazy. I bought the book “[Search Inside Yourself](http://www.amazon.com/Search-Inside-Yourself-Unexpected-Achieving/dp/0062116932)” (by Chade-Meng Tan, a Google engineer), read the first chapter and stopped (like I do with most books). I knew that if I wanted to be serious about this I should put myself in a situation where I wouldn’t have any other alternative than to just do it. That’s how I work. So I signed up for 10-day Vipassana Meditation Retreat in [Dhamma Manda](http://www.manda.dhamma.org/), 3 hours north of San Francisco, April 15th 2015.
 
 ##TL;DR;
 * I absolutely recommend it
@@ -15,11 +15,11 @@ I’ve always been interested in meditation but I’ve never practiced it. I’m
 * You’ll learn to have a more balanced mind (equanimity)
 * Food is excellent and it will make you want to become vegetarian
 
-I’ve been running all around for the past 7 years, moving from Belgium to San Francisco to create a startup ([Storify](https://storify.com). I never spent more than a day away from my iPhone since the first version came out. I was always “connected”. I needed to take a break, to think about things. I wanted to take the time to better understand life and its purpose.
+I’ve been running all around for the past 7 years, moving from Belgium to San Francisco to create a startup ([Storify](https://storify.com)). I never spent more than a day away from my iPhone since the first version came out. I was always “connected”. I needed to take a break, to think about things. I wanted to take the time to better understand life and its purpose.
 
 As I’m now “in between startups”, I wanted to make sure that whatever I will end up doing next will be something meaningful, which will contribute in a positive way to humanity. Something that will move the needle, something that will be worth devoting so much time of my life.
 
-![The Dhamma Manda Vipassana Meditation Center in North California (near Kelseyville) (Photo [Dhamma Manda on Facebook](http://facebook.com/DhammaManda)](https://medium2.global.ssl.fastly.net/max/2000/1*peNGm67ELigNQtSx4WUoaQ.jpeg)*The Dhamma Manda Vipassana Meditation Center in North California (near Kelseyville) (Photo [Dhamma Manda on Facebook](http://facebook.com/DhammaManda)*
+![The Dhamma Manda Vipassana Meditation Center in North California (near Kelseyville) (Photo [Dhamma Manda on Facebook](http://facebook.com/DhammaManda))](https://medium2.global.ssl.fastly.net/max/2000/1*peNGm67ELigNQtSx4WUoaQ.jpeg)*The Dhamma Manda Vipassana Meditation Center in North California (near Kelseyville) (Photo [Dhamma Manda on Facebook](http://facebook.com/DhammaManda))*
 
 The Vipassana 10-day Meditation Retreat is like a bootcamp. We were about 50 people, more or less equally split between genders but we were segregated at all times. The rule of noble silence applies throughout the course. No talk, except to ask questions at 9pm to the teacher on an individual basis. No book, no notes, no mobile phone, no Internet, nothing. The goal is to disconnect completely from the outside world and focus on your meditation and on yourself.
 <center>
@@ -50,19 +50,20 @@ Meditation
 Discourse (video by [SN. Goenka](http://en.wikipedia.org/wiki/S._N._Goenka), meditation teacher from Burma/India)
 **8:20pm-9pm**
 Meditation
-**10pm**Lights off</center>
+**10pm**
+Lights off</center>
 
 ##The first 3 days: Anapana
 
 The first 3 days were probably the most difficult ones. Change of rythm, change of diet, change of behavior, etc. It takes a bit of time for your mind to get used to it.
 
-The first meditations are all about being aware of your breath (Anapana means “[Mindfulness of Breathing](http://en.wikipedia.org/wiki/Anapanasati)). Breathing is the only body function that works both in a conscious and an unconscious way. When you don’t think about it, you are still breathing. But when you do, you can control it. That’s why it’s a really good bridge to connect with your subconscious.
+The first meditations are all about being aware of your breath (Anapana means “[Mindfulness of Breathing](http://en.wikipedia.org/wiki/Anapanasati)”). Breathing is the only body function that works both in a conscious and an unconscious way. When you don’t think about it, you are still breathing. But when you do, you can control it. That’s why it’s a really good bridge to connect with your subconscious.
 
 At first, it’s quite difficult to get your mind to shut up. You can’t help but thinking about memories or things that you would like to do in the future. You need to learn to tame your mind and bring it back whenever you can to your breath. Easier said than done. It takes practice and dedication.
 
 ![SN. Goenka’s DVD was playing every evening for an hour to teach us the Vipassana meditation technique. Image source: [solidgoldcreativity.com](http://solidgoldcreativity.com/)](https://medium2.global.ssl.fastly.net/max/2560/1*xBFzftpIXSsBpcspwhPsbA.jpeg)*SN. Goenka’s DVD was playing every evening for an hour to teach us the Vipassana meditation technique. Image source: [solidgoldcreativity.com](http://solidgoldcreativity.com/)*
 
-Every evening at 7pm, there was a 1h15 discourse given by [SN. Goenka](http://en.wikipedia.org/wiki/S._N._Goenka) That was by far the highlight of the day. This guy is so inspiring. What he was saying was music to my ears.
+Every evening at 7pm, there was a 1h15 discourse given by [SN. Goenka](http://en.wikipedia.org/wiki/S._N._Goenka). That was by far the highlight of the day. This guy is so inspiring. What he was saying was music to my ears.
 
 I’ve had a Catholic education back in Europe and I’ve always had a problem with it. As an engineer, I have a logical mind and I always push back on anything that people would tell me without proper explanation. If I can’t understand something, I won’t remember it and I won’t believe it.
 
@@ -75,7 +76,7 @@ It also occurred to me that this bottom up nature of this teaching makes it part
 The benefit of doing such retreat is that you get to cover not only the theory through those daily discourses, but you also get to practice it. And that makes a massive difference. A lot of the things that you start experiencing don’t happen over night. It takes a few days. That’s why it’s so important to be in the right environment for 10 days to give this technique a fair try.
 > You are not only a body, you are also a mind. The two work like the wings of a butterfly. You need to master both to be able to fly.
 
-We are all made of subatomic particles that vibrate continuously (Buddhists call them [Kalapas](http://en.wikipedia.org/wiki/Kalapas). Nothing is solid. Everything is a vibration. Those vibrations happen so quickly that we don’t realize them. It’s a bit like the light of a bulb, it may seem fixed and constant, but in reality there is a continuous flow — an electric current — going through it.
+We are all made of subatomic particles that vibrate continuously (Buddhists call them [Kalapas](http://en.wikipedia.org/wiki/Kalapas)). Nothing is solid. Everything is a vibration. Those vibrations happen so quickly that we don’t realize them. It’s a bit like the light of a bulb, it may seem fixed and constant, but in reality there is a continuous flow — an electric current — going through it.
 
 Our body is constantly producing Kalapas. They are arising and passing away in a continuous flow. With enough practice and concentration of your mind, you can start experiencing this process.
 
@@ -102,7 +103,7 @@ So this was for me my first crash course “mastering your mind 101” to get up
 
 ##Day 4 to Day 10: Vipassana
 
-Vipassana means “[Insight into the True Nature of Reality](http://en.wikipedia.org/wiki/Vipassan%C4%81).
+Vipassana means “[Insight into the True Nature of Reality](http://en.wikipedia.org/wiki/Vipassan%C4%81)”.
 
 ![The Dhamma Hall where all the group meditation were taking place. Photo [Dhamma Manda on Facebook](http://facebook.com/DhammaManda)](https://medium2.global.ssl.fastly.net/max/2000/1*1BuIZG_MwwHPORicZUJ7rg.jpeg)*The Dhamma Hall where all the group meditation were taking place. Photo [Dhamma Manda on Facebook](http://facebook.com/DhammaManda)*
 
@@ -110,7 +111,7 @@ On Day 4, you are asked for the first time to sit for an hour without moving you
 
 After a few sittings you start being able to calmly observe the pain and detach yourself from it. Your mind acts then as a torch that highlights one part of the body at a time, while the others remain in the dark (and therefore you don’t feel the pain anymore). Experiencing this is mind blowing.
 
-The goal here is to learn to reprogram your body and your mind. You become aware of all the reactions that you have that have become automatisms. Those predetermined reactions are called [Sankharas](http://en.wikipedia.org/wiki/Sa%E1%B9%85kh%C4%81ra) They are the fruits of our past experiences. Every time we have a reaction to something — a craving or an aversion — we build up a new Sankhara. They accumulate over time and consolidate into our subconscious. By meditating, they come up to the surface into our conscious mind. The way to get rid of them is not to ignore them but to face them, observe them objectively and let them go away. Because everything — even our thoughts —are arising and passing away, continuously.
+The goal here is to learn to reprogram your body and your mind. You become aware of all the reactions that you have that have become automatisms. Those predetermined reactions are called [Sankharas](http://en.wikipedia.org/wiki/Sa%E1%B9%85kh%C4%81ra). They are the fruits of our past experiences. Every time we have a reaction to something — a craving or an aversion — we build up a new Sankhara. They accumulate over time and consolidate into our subconscious. By meditating, they come up to the surface into our conscious mind. The way to get rid of them is not to ignore them but to face them, observe them objectively and let them go away. Because everything — even our thoughts —are arising and passing away, continuously.
 
 Day 7 I started to experience what we call a free flow of vibrations throughout the body. That’s a pretty phenomenal experience. It’s like an entire world happening within my body that just opened up to my conscious mind. Quite an experience. It’s easy to fall into the trap of enjoying it too much and start feeling craving for it. It’s not a “game of sensations”. We need to learn to observe pleasant experiences with the same equanimity that we observe unpleasant ones.
 
