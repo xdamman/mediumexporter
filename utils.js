@@ -50,10 +50,10 @@ var utils = {
         markup = "\n";
         break;
       case 2:
-        p.text = "\n#"+p.text.replace(/\n/g,'\n#');
+        p.text = "\n# "+p.text.replace(/\n/g,'\n# ');
         break;
       case 3:
-        p.text = "\n##"+p.text.replace(/\n/g,'\n##');
+        p.text = "\n## "+p.text.replace(/\n/g,'\n## ');
         break;
       case 4: // image & caption
         var imgwidth = parseInt(p.metadata.originalWidth,10);
@@ -64,7 +64,7 @@ var utils = {
         markup = "> ";
         break;
       case 7: // quote
-        p.text = "> #"+p.text.replace(/\n/g,'\n> #');
+        p.text = "> # "+p.text.replace(/\n/g,'\n> # ');
         break;
       case 8:
         p.text = "\n    "+p.text.replace(/\n/g,'\n    ');
@@ -79,7 +79,7 @@ var utils = {
         p.text = '\n<iframe src="https://medium.com/media/'+p.iframe.mediaResourceId+'" frameborder=0></iframe>';
         break;
       case 13:
-        markup = "\n###";
+        markup = "\n### ";
         break;
       case 15: // caption for section image
         p.text = "*"+p.text+"*";
