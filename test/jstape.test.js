@@ -22,7 +22,7 @@ describe("js tape", function() {
     var p = story.paragraphs[28];
     var text = utils.processParagraph(p);
 
-    var markdown = "> #Test assertions should be dead simple,\n> #& [completely free of magic](https://en.wikipedia.org/wiki/Magic_(programming)).";
+    var markdown = "> # Test assertions should be dead simple,\n> # & [completely free of magic](https://en.wikipedia.org/wiki/Magic_(programming)).";
     expect(text).to.equal(markdown);
     done();
   });
