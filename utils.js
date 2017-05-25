@@ -5,6 +5,7 @@ var MEDIUM_IMG_CDN = "https://medium2.global.ssl.fastly.net/max/";
 var utils = {
   loadMediumPost: function(mediumURL, cb) {
     if(mediumURL.match(/^http/i)) {
+      mediumURL = mediumURL.replace(/#.+$/, '');
       request(mediumURL+"?format=json", function(err, res, body) {
         if(err) return cb(err);
         var json_string = body.substr(body.indexOf('{'));
