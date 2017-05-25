@@ -54,7 +54,9 @@ utils.loadMediumPost(mediumURL, function(err, json) {
 
   story.markdown = [];
   story.markdown.push("\n# "+story.title.replace(/\n/g,'\n# '));
-  story.markdown.push("\n## "+story.subtitle.replace(/\n/g,'\n## '));
+  if (undefined != story.subtitle) {
+    story.markdown.push("\n## "+story.subtitle.replace(/\n/g,'\n## '));
+  }
   for(var i=0;i<story.paragraphs.length;i++) {
     
     if(sections[i]) story.markdown.push(sections[i]);
