@@ -1,6 +1,6 @@
 var request = require('request');
 
-var MEDIUM_IMG_CDN = "https://medium2.global.ssl.fastly.net/max/";
+var MEDIUM_IMG_CDN = "https://cdn-images-1.medium.com/max/";
 
 var utils = {
   loadMediumPost: function(mediumURL, cb) {
