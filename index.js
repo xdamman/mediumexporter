@@ -30,20 +30,20 @@ utils.loadMediumPost(mediumURL, function(err, json) {
   var s = json.payload.value;
   var story = {};
 
-  story.title = s.title;
-  story.subtitle = s.content.subtitle;
-  story.date = new Date(s.createdAt);
-  story.url = s.canonicalUrl;
-  story.language = s.detectedLanguage;
-  story.license = s.license;
+  story.title = s.title || '';
+  story.subtitle = s.content.subtitle || '';
+  story.date = new Date(s.createdAt) || '';
+  story.url = s.canonicalUrl || '';
+  story.language = s.detectedLanguage || '';
+  story.license = s.license || '';
 
   if(program.info) {
     console.log(story);
     process.exit(0);
   }
 
-  story.sections = s.content.bodyModel.sections;
-  story.paragraphs = s.content.bodyModel.paragraphs;
+  story.sections = s.content.bodyModel.sections || [];
+  story.paragraphs = s.content.bodyModel.paragraphs || [];
 
   var sections = [];
   for(var i=0;i<story.sections.length;i++) {
