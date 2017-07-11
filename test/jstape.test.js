@@ -20,28 +20,28 @@ describe("js tape", function() {
   // Buggy because the href value contains a "(" and ")" which confuses markdown
   it("converts a paragraph with an important quote that includes an anchor tag to markdown", function(done) {
     var p = story.paragraphs[28];
-    var text = utils.processParagraph(p);
-
-    var markdown = "> # Test assertions should be dead simple,\n> # & [completely free of magic](https://en.wikipedia.org/wiki/Magic_(programming)).";
-    expect(text).to.equal(markdown);
-    done();
+    utils.processParagraph(p, function(err, text) {
+      var markdown = "> # Test assertions should be dead simple,\n> # & [completely free of magic](https://en.wikipedia.org/wiki/Magic_(programming)).";
+      expect(text).to.equal(markdown);
+      done();
+    });
   });
 
   it("converts a paragraph with a github gist embed to markdown", function(done) {
     var p = story.paragraphs[38];
-    var text = utils.processParagraph(p);
-
-    var markdown = '\n<iframe src="https://medium.com/media/9d8e481812059cb5d76ec771194c2ecb" frameborder=0></iframe>';
-    expect(text).to.equal(markdown);
-    done();
+    utils.processParagraph(p, function(err, text) {
+      var markdown = '\n<iframe src="https://medium.com/media/9d8e481812059cb5d76ec771194c2ecb" frameborder=0></iframe>';
+      expect(text).to.equal(markdown);
+      done();
+    });
   });
 
   it("converts a paragraph with code excerpt to markdown", function(done) {
     var p = story.paragraphs[41];
-    var text = utils.processParagraph(p);
-
-    var markdown = '\n    TAP version 13\n    # A passing test\n    ok 1 This test will pass.\n    # Assertions with tape.\n    not ok 2 Given two mismatched values, .equal() should produce a nice bug report\n      ---\n        operator: equal\n        expected: \'something to test\'\n        actual:   \'sonething to test\'\n      ...';
-    expect(text).to.equal(markdown);
-    done();
+    utils.processParagraph(p, function(err, text) {
+      var markdown = '\n    TAP version 13\n    # A passing test\n    ok 1 This test will pass.\n    # Assertions with tape.\n    not ok 2 Given two mismatched values, .equal() should produce a nice bug report\n      ---\n        operator: equal\n        expected: \'something to test\'\n        actual:   \'sonething to test\'\n      ...';
+      expect(text).to.equal(markdown);
+      done();
+    });
   });
 });

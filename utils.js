@@ -27,7 +27,17 @@ var utils = {
     }
     return section;
   },
-  processParagraph: function(p) {
+  getYouTubeEmbed: function(iframesrc, cb) {
+    request(iframesrc, function(err, res) {
+      var tokens = res.body.match(/youtube.com%2Fembed%2F([^%]+)%3F/);
+      if (tokens && tokens.length > 1) {
+        var videoId = tokens[1];
+        return cb(null, `<center><iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe></center>`);
+      }
+      cb(null, `<iframe src="${iframesrc}" frameborder=0></iframe>`);
+    });
+  },
+  processParagraph: function(p, cb) {
 
     var markups_array = utils.createMarkupsArray(p.markups);
 
@@ -59,7 +69,11 @@ var utils = {
       case 4: // image & caption
         var imgwidth = parseInt(p.metadata.originalWidth,10);
         var imgsrc = MEDIUM_IMG_CDN+Math.max(imgwidth*2,2000)+"/"+p.metadata.id;
-        p.text = "\n!["+p.text+"]("+imgsrc+")*"+p.text+"*";
+        var text = "\n!["+p.text+"]("+imgsrc+")";
+        if (p.text) {
+          text += "*"+p.text+"*";
+        }
+        p.text = text;
         break;
       case 6:
         markup = "> ";
@@ -77,8 +91,9 @@ var utils = {
         markup = "\n1. ";
         break;
       case 11:
-        p.text = '\n<iframe src="https://medium.com/media/'+p.iframe.mediaResourceId+'" frameborder=0></iframe>';
-        break;
+        return utils.getYouTubeEmbed('https://medium.com/media/'+p.iframe.mediaResourceId, function(err, embed) {
+          cb(null, `\n${embed}`);
+        });
       case 13:
         markup = "\n### ";
         break;
@@ -91,7 +106,7 @@ var utils = {
 
     if(p.alignment == 2&& p.type != 6 && p.type != 7) p.text = "<center>" + p.text + "</center>";
 
-    return p.text;
+    return cb(null, p.text);
   },
   addMarkup: function(markups_array, open, close, start, end) {
     if(markups_array[start])

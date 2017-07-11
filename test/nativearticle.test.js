@@ -18,10 +18,10 @@ describe("native article", function() {
 
   it("converts a paragraph with an anchor tag to markdown", function(done) {
     var p = story.paragraphs[14];
-    var text = utils.processParagraph(p);
-
-    var markdown = "\nThe next step for you reader is to install an ad blocker for your browser. I recommend [uBlock](http://ublock.org). Also [Pocket](http://getpocket.com) or [Instapaper](http://instapaper.com) are great apps to read content from publishers without having to load their website again and again.";
-    expect(text).to.equal(markdown);
-    done();
+    utils.processParagraph(p, function(err, text) {
+      var markdown = "\nThe next step for you reader is to install an ad blocker for your browser. I recommend [uBlock](http://ublock.org). Also [Pocket](http://getpocket.com) or [Instapaper](http://instapaper.com) are great apps to read content from publishers without having to load their website again and again.";
+      expect(text).to.equal(markdown);
+      done();
+    });
   });
 });

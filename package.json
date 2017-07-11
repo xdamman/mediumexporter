@@ -7,6 +7,7 @@
     "test": "test"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
     "commander": "^2.8.1",
     "request": "^2.60.0"
   },
