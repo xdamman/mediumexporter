@@ -9,7 +9,8 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "commander": "^2.8.1",
-    "request": "^2.60.0"
+    "request": "^2.60.0",
+    "rss-parser": "^2.10.6"
   },
   "devDependencies": {
     "chai": "^3.2.0",

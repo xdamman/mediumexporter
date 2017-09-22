@@ -6,7 +6,7 @@ var utils = {
   loadMediumPost: function(mediumURL, cb) {
     if(mediumURL.match(/^http/i)) {
       mediumURL = mediumURL.replace(/#.+$/, '');
-      request(mediumURL+"?format=json", function(err, res, body) {
+      request(mediumURL, {qs: {format: 'json'}}, function(err, res, body) {
         if(err) return cb(err);
         var json_string = body.substr(body.indexOf('{'));
         var json = JSON.parse(json_string);
