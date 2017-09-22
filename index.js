@@ -17,7 +17,7 @@ program
     console.log('  Examples:');
     console.log('');
     console.log('    $ mediumexporter https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e > medium_post.md');
-    console.log('    $ mediumexporter -o ./posts https://medium.com/feed/@xdamman');
+    console.log('    $ mediumexporter -O ./posts https://medium.com/feed/@xdamman');
     console.log('    $ mediumexporter --headers --separator --- https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e > medium_post.md');
     console.log('    $ mediumexporter mediumpost.json');
     console.log('');
