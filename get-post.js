@@ -20,10 +20,13 @@ module.exports = function(mediumURL, program, callback) {
       process.exit(0);
     }
 
+    var outputText = '';
+
     if(program.headers) {
-      console.log("url: "+story.url);
-      console.log("date: "+story.date);
-      console.log(program.separator);
+      outputText += 'url:' + story.url + '\n';
+      outputText += 'date:' + story.date + '\n';
+      outputText += 'title:' + story.title + '\n';
+      outputText += program.separator + '\n';
     }
 
     story.sections = s.content.bodyModel.sections;
@@ -73,15 +76,15 @@ module.exports = function(mediumURL, program, callback) {
       if (program.debug) {
         console.log("debug", story.paragraphs);
       }
-      let text = story.markdown.join('\n');
+      outputText += story.markdown.join('\n');
       if (callback) {
-        callback(null, text);
+        callback(null, outputText);
       } else if (program.output) {
-        fs.writeFile(program.output, text, err => {
+        fs.writeFile(program.output, outputText, err => {
           if (err) throw err;
         })
       } else {
-        console.log(text);
+        console.log(outputText);
       }
     });
 
