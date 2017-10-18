@@ -49,6 +49,16 @@ module.exports = function(mediumURL, program, callback) {
       story.markdown.push("\n"+story.subtitle.replace(/#+/,''));
     }
 
+    let lastParagraph = null;
+    story.paragraphs = story.paragraphs.filter((p, idx) => {
+      if (p.type === 8 && lastParagraph && lastParagraph.type === 8) {
+        lastParagraph.text += '\n\n' + p.text;
+        return false;
+      }
+      lastParagraph = p;
+      return true;
+    })
+
     var promises = [];
 
     for(var i=2;i<story.paragraphs.length;i++) {
