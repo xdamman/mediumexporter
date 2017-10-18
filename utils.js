@@ -51,7 +51,8 @@ var utils = {
           line = line
               .replace(/\\n\s*/g, '\n')
               .replace(/\n+/g, '\n')
-              .replace(/\\(.)/g, '$1');
+              .replace(/\\(.)/g, '$1')
+              .replace(/`/g, '&#96;');
           return line;
         }).join('\n');
         return cb(null, html);
