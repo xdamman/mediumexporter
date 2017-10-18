@@ -78,6 +78,12 @@ var utils = {
       p.text = tokens.join('');
     }
 
+    if (p.type !== 8 && p.type !== 10) {
+      p.text = p.text
+          .replace(/>/g, '&gt;')
+          .replace(/</g, '&lt;');
+    }
+
     var markup = "";
     switch(p.type) {
       case 1:
