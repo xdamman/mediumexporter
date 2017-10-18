@@ -105,7 +105,7 @@ var utils = {
         p.text = "> # "+p.text.replace(/\n/g,'\n> # ');
         break;
       case 8:
-        p.text = "\n    "+p.text.replace(/\n/g,'\n    ');
+        p.text = "\n```\n" + p.text + "\n```\n";
         break;
       case 9:
         markup = "\n* ";
