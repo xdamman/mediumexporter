@@ -5,7 +5,7 @@ var MEDIUM_IMG_CDN = "https://cdn-images-1.medium.com/max/";
 var utils = {
   loadMediumPost: function(mediumURL, cb) {
     if(mediumURL.match(/^http/i)) {
-      mediumURL = mediumURL.replace(/#.+$/, '');
+      mediumURL = mediumURL.replace(/#.*$/, '');
       request(mediumURL+"?format=json", function(err, res, body) {
         if(err) return cb(err);
         var json_string = body.substr(body.indexOf('{'));
