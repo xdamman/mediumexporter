@@ -136,6 +136,9 @@ var utils = {
         case 3: // anchor tag
           utils.addMarkup(markups_array, "[", "]("+m.href+")", m.start, m.end);
           break;
+        case 10: // inline code
+          utils.addMarkup(markups_array, "`","`",m.start,m.end);
+          break;
         default:
           console.error("Unknown markup type "+m.type, m);
           break;
