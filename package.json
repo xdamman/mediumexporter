@@ -2,14 +2,15 @@
   "name": "mediumexporter",
   "version": "0.1.6",
   "description": "Export posts from medium.com to markdown",
-  "main": "index.js",
+  "main": "entry.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
     "commander": "^2.8.1",
-    "request": "^2.60.0"
+    "request": "^2.60.0",
+    "rss-parser": "^2.10.6"
   },
   "devDependencies": {
     "chai": "^3.2.0",

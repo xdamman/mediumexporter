@@ -6,7 +6,7 @@ var utils = {
   loadMediumPost: function(mediumURL, cb) {
     if(mediumURL.match(/^http/i)) {
       mediumURL = mediumURL.replace(/#.+$/, '');
-      request(mediumURL+"?format=json", function(err, res, body) {
+      request(mediumURL, {qs: {format: 'json'}}, function(err, res, body) {
         if(err) return cb(err);
         var json_string = body.substr(body.indexOf('{'));
         var json = JSON.parse(json_string);
@@ -37,6 +37,29 @@ var utils = {
       cb(null, `<iframe src="${iframesrc}" frameborder=0></iframe>`);
     });
   },
+  getGitHubEmbed: function(iframesrc, cb) {
+    request(iframesrc, function(err, res) {
+      if (err) return cb(err);
+      var tokens = res.body.match(/script src="https:\/\/gist.github.com\/([^"]*)"/);
+      if (!tokens) return cb(new Error("GitHub embed not found"));
+      var scriptsrc = `https://gist.github.com/${tokens[1]}`;
+      request(scriptsrc, function(err, res) {
+        if (err) return cb(err);
+        var html = res.body.split('\n').map((line, idx) => {
+          if (idx === 0) return ''; // skip stylesheet
+          line = line.replace(/document.write\('(.*)'\)/, '$1');
+          line = line
+              .replace(/\\n\s*/g, '\n')
+              .replace(/\n+/g, '\n')
+              .replace(/\\(.)/g, '$1')
+              .replace(/`/g, '&#96;');
+          return line;
+        }).join('\n');
+        return cb(null, html);
+      });
+    });
+  },
+
   processParagraph: function(p, cb) {
 
     var markups_array = utils.createMarkupsArray(p.markups);
@@ -53,6 +76,12 @@ var utils = {
       }
       tokens.push(text.substring(j-1));
       p.text = tokens.join('');
+    }
+
+    if (p.type !== 8 && p.type !== 10) {
+      p.text = p.text
+          .replace(/>/g, '&gt;')
+          .replace(/</g, '&lt;');
     }
 
     var markup = "";
@@ -82,7 +111,7 @@ var utils = {
         p.text = "> # "+p.text.replace(/\n/g,'\n> # ');
         break;
       case 8:
-        p.text = "\n    "+p.text.replace(/\n/g,'\n    ');
+        p.text = "\n```\n" + p.text + "\n```\n";
         break;
       case 9:
         markup = "\n* ";
@@ -91,7 +120,7 @@ var utils = {
         markup = "\n1. ";
         break;
       case 11:
-        return utils.getYouTubeEmbed('https://medium.com/media/'+p.iframe.mediaResourceId, function(err, embed) {
+        return utils.getGitHubEmbed('https://medium.com/media/'+p.iframe.mediaResourceId, function(err, embed) {
           cb(null, `\n${embed}`);
         });
       case 13:
@@ -135,6 +164,9 @@ var utils = {
           break;
         case 3: // anchor tag
           utils.addMarkup(markups_array, "[", "]("+m.href+")", m.start, m.end);
+          break;
+        case 10: // code
+          utils.addMarkup(markups_array, '`', '`', m.start, m.end);
           break;
         default:
           console.error("Unknown markup type "+m.type, m);
