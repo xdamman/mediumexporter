@@ -1,4 +1,4 @@
 module.exports = {
-  getFeed: require('./get-feed'),
-  getPost: require('./get-post'),
+  getFeed: require('./lib/get-feed'),
+  getPost: require('./lib/get-post')
 }
