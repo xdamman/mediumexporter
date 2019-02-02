@@ -25,7 +25,6 @@ var mediumURL = program.args[0]
 
 if (!mediumURL) {
   console.log('missing medium url')
-  return
 }
 
 if (mediumURL.match(/medium\.com\/feed\//)) {
