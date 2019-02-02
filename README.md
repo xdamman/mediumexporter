@@ -1,22 +1,24 @@
 # Medium Exporter
+
 Export your stories published on medium.com to markdown.
 
-## Why?
-
-I really enjoy using [Medium](https://medium.com) to publish a few posts every now and then. But I also want to have a copy on my own blog which is using markdown.
-
-## Contributions
-
-I welcome contributions to make it work with other export formats that could be easily imported in other blogging engines.
-
-## Installation
-
-    npm install -g mediumexporter
-    
 ## Usage
 
-    $> mediumexporter https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e > medium_post.md
+        ./index.js {url}
+            -O, --output - write to specified output directory
+            -I, --info – Show information about the medium post
 
-To have a complete list of options:
+## CLI example
 
-    $> mediumexporter -h
+If not output directory is specified, images and content will be downloaded into `/content`
+
+        ./index.js https://medium.com/@PatrickHeneise/malaysia-16be98ab673e
+
+## programmatic example
+
+        async function example() {
+          await mediumexporter.getPost('url', {
+            output: "./content/posts"
+          });
+          console.log("done");
+        }
