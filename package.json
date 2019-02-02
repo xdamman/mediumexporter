@@ -2,7 +2,7 @@
   "name": "mediumexporter",
   "version": "1.0.0",
   "description": "Export posts from medium.com to markdown",
-  "main": "entry.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -28,8 +28,8 @@
     "test": "tap --coverage --jobs-auto './test/**/*-test.js'",
     "coverage": "tap --coverage-report=lcov && codecov",
     "semantic-release": "semantic-release",
-    "lint": "eslint --ignore-path .gitignore --ext .js index.js entry.js lib test",
-    "lint-autofix": "eslint --ignore-path .gitignore --ext .js lib entry.js index.js test --fix",
+    "lint": "eslint --ignore-path .gitignore --ext .js index.js lib test",
+    "lint-autofix": "eslint --ignore-path .gitignore --ext .js lib index.js test --fix",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "husky": {
