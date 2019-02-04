@@ -6,8 +6,9 @@ if (require.main !== module) {
     getPost: require('./lib/get-post')
   }
 } else {
-  var program = require('commander'),
-    package = require('./package.json')
+  const program = require('commander')
+  const package = require('./package.json')
+
   program
     .version(package.version)
     .description(package.description)
@@ -22,6 +23,7 @@ if (require.main !== module) {
       console.log('  Examples:')
       console.log('')
       console.log('    $ mediumexporter -O content')
+      console.log('    $ mediumexporter --hugo')
       console.log('')
     })
 
