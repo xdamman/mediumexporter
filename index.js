@@ -18,12 +18,14 @@ if (require.main !== module) {
       '-O, --output <destination>',
       'File (if URL is a post) or directory (if URL is a feed) to output to'
     )
+    .option('--hugo', 'use gohugo.io specific shortcodes')
+    .option('--frontmatter', 'enable markdown frontmatter')
     .option('-d, --debug', 'Show debugging info')
     .on('--help', function() {
       console.log('  Examples:')
       console.log('')
-      console.log('    $ mediumexporter -O content')
-      console.log('    $ mediumexporter --hugo')
+      console.log('    $ mediumexporter -O content mediumurl')
+      console.log('    $ mediumexporter --hugo mediumurl')
       console.log('')
     })
 
