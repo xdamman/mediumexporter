@@ -7,6 +7,8 @@ Export your stories published on medium.com to markdown.
     ./index.js {url}
         -O, --output - write to specified output directory
         -I, --info – Show information about the medium post
+        --hugo - enable gohugo.io shortcodes
+        --frontmatter - enable frontmatter
 
 ## CLI example
 
@@ -19,10 +21,11 @@ If not output directory is specified, images and content will be downloaded into
 ### get individual posts
 
     async function example() {
-      await mediumexporter.getPost('url', {
-        output: "./content/posts"
-      });
-      console.log("done");
+      mediumexporter.getPost(link, {
+        output: "content/posts",
+        hugo: true,
+        frontmatter: true
+      })
     }
 
 ### get feeds (default page size is 10)
