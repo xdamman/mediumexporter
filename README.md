@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/xdamman/mediumexporter.svg?branch=master)](https://travis-ci.org/xdamman/mediumexporter)
-[![Coverage Status](https://coveralls.io/repos/github/xdamman/mediumexporter/badge.svg?branch=master)](https://coveralls.io/github/xdamman/mediumexporter?branch=master)
 
 # Medium Exporter
 
