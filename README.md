@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/xdamman/mediumexporter.svg?branch=master)](https://travis-ci.org/xdamman/mediumexporter)
+
 # Medium Exporter
 
 Export your stories published on medium.com to markdown.
