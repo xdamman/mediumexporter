@@ -13,6 +13,8 @@
     "underscore.string": "^3.3.5"
   },
   "devDependencies": {
+    "codecov": "^3.1.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.13.0",
     "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.3.1",
@@ -26,7 +28,7 @@
   },
   "scripts": {
     "test": "tap --coverage --jobs-auto './test/**/*-test.js'",
-    "coverage": "tap --coverage-report=lcov && codecov",
+    "codecov": "tap --coverage-report=lcov && codecov",
     "semantic-release": "semantic-release",
     "lint": "eslint --ignore-path .gitignore --ext .js index.js lib test",
     "lint-autofix": "eslint --ignore-path .gitignore --ext .js lib index.js test --fix",

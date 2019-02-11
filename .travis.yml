@@ -1,13 +1,16 @@
 language: node_js
 node_js:
-  - '8'
   - '10'
+  - '8'
+install:
+  - travis_retry npm install
+script:
+  - npm run test
+after_success:
+  - npm run codecov
 jobs:
-include:
-  - stage: release
-    node_js: lts/*
-    deploy:
-      provider: script
-      skip_cleanup: true
+  include:
+    - stage: release
+      node_js: lts/*
       script:
-        - npx semantic-release
+        - npm run semantic-release
