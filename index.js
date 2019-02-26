@@ -19,6 +19,10 @@ if (require.main !== module) {
       'File (if URL is a post) or directory (if URL is a feed) to output to'
     )
     .option('--hugo', 'use gohugo.io specific shortcodes')
+    .option(
+      '--jekyll',
+      'prefix the files with date, place images in an assets/'
+    )
     .option('--frontmatter', 'enable markdown frontmatter')
     .option('-d, --debug', 'Show debugging info')
     .on('--help', function() {

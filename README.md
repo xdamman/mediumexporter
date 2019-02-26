@@ -12,6 +12,7 @@ Export your stories published on medium.com to markdown.
         -I, --info – Show information about the medium post
         --hugo - enable gohugo.io shortcodes
         --frontmatter - enable frontmatter
+        --jekyll - format content and images for us in Jekyll blogs
 
 ## CLI example
 
