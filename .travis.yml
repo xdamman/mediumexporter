@@ -1,0 +1,21 @@
+language: node_js
+notifications:
+  email: false
+cache:
+  directories:
+    - node_modules
+node_js:
+  - '10'
+  - '8'
+install:
+  - travis_retry npm install
+script:
+  - npm run test
+after_success:
+  - npm run codecov
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script:
+        - npm run semantic-release

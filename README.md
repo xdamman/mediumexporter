@@ -1,22 +1,38 @@
+[![Build Status](https://travis-ci.org/xdamman/mediumexporter.svg?branch=master)](https://travis-ci.org/xdamman/mediumexporter)
+[![Coverage Status](https://coveralls.io/repos/github/xdamman/mediumexporter/badge.svg?branch=master)](https://coveralls.io/github/xdamman/mediumexporter?branch=master)
+
 # Medium Exporter
+
 Export your stories published on medium.com to markdown.
 
-## Why?
-
-I really enjoy using [Medium](https://medium.com) to publish a few posts every now and then. But I also want to have a copy on my own blog which is using markdown.
-
-## Contributions
-
-I welcome contributions to make it work with other export formats that could be easily imported in other blogging engines.
-
-## Installation
-
-    npm install -g mediumexporter
-    
 ## Usage
 
-    $> mediumexporter https://medium.com/@xdamman/my-10-day-meditation-retreat-in-silence-71abda54940e > medium_post.md
+    ./index.js {url}
+        -O, --output - write to specified output directory
+        -I, --info – Show information about the medium post
+        --hugo - enable gohugo.io shortcodes
+        --frontmatter - enable frontmatter
+        --jekyll - format content and images for us in Jekyll blogs
 
-To have a complete list of options:
+## CLI example
 
-    $> mediumexporter -h
+If not output directory is specified, images and content will be downloaded into `/content`
+
+    ./index.js https://medium.com/@PatrickHeneise/malaysia-16be98ab673e
+
+## programmatic example
+
+### get individual posts
+
+    async function example() {
+      mediumexporter.getPost(link, {
+        output: "content/posts",
+        hugo: true,
+        frontmatter: true
+      })
+    }
+
+### get feeds (default page size is 10)
+
+    const exporter = require('./index')
+    exporter.getFeed('https://medium.com/feed/@xdamman', { output: 'content' })
