@@ -25,6 +25,10 @@ if (require.main !== module) {
     )
     .option('--frontmatter', 'enable markdown frontmatter')
     .option('-d, --debug', 'Show debugging info')
+    .option(
+      '--git-token <git-token>',
+      'include a git token when the gists are fetched'
+    )
     .on('--help', function() {
       console.log('  Examples:')
       console.log('')
