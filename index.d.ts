@@ -6,6 +6,8 @@ type GetPostOptionsBase = {
   commands?: boolean
   draft?: boolean
   jekyll?: boolean
+  format?: 'md' | 'mdx';
+  imagesPath?: string;
 }
 
 type GetPostOptionsReturnObject = GetPostOptionsBase & {
