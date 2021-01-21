@@ -8,6 +8,7 @@ type GetPostOptionsBase = {
   jekyll?: boolean
   format?: 'md' | 'mdx';
   imagesPath?: string;
+  canonical?: boolean;
 }
 
 type GetPostOptionsReturnObject = GetPostOptionsBase & {
