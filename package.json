@@ -65,7 +65,7 @@
   ],
   "preferGlobal": true,
   "bin": {
-    "mediumexporter": "index.js"
+    "mediumexporter": "bin/cli.js"
   },
   "bugs": {
     "url": "https://github.com/xdamman/mediumexporter/issues"
